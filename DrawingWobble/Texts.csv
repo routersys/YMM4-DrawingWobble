@@ -1,0 +1,21 @@
+Key,Parameter,ja-jp,en-us,zh-cn,zh-tw,ko-kr,es-es,ar-sa,id-id
+DrawingWobble,,作画ゆれ,Drawing Wobble,作画抖动,作畫抖動,작화 흔들림,Temblor de dibujo,اهتزاز الرسم,Getar Gambar
+WobbleGroup,,ゆれ,Wobble,抖动,抖動,흔들림,Temblor,الاهتزاز,Getaran
+EdgeGroup,,輪郭,Contour,轮廓,輪廓,윤곽,Contorno,المحيط,Kontur
+Amplitude,,ゆれ幅,Amplitude,抖动幅度,抖動幅度,흔들림 폭,Amplitud,السعة,Amplitudo
+AmplitudeDescription,,映像をずらす最大の距離です,Sets the maximum distance the image is displaced.,设置画面位移的最大距离。,設定畫面位移的最大距離。,영상을 어긋나게 하는 최대 거리입니다.,Define la distancia máxima de desplazamiento de la imagen.,يضبط أقصى مسافة يُزاح بها الصورة.,Mengatur jarak maksimum pergeseran gambar.
+Scale,,ゆれの粗さ,Wobble Scale,抖动粗细,抖動粗細,흔들림 거칠기,Escala del temblor,مقياس الاهتزاز,Skala Getaran
+ScaleDescription,,ゆれの向きが切り替わる間隔です。小さくすると細かく波打ちます,Sets the spacing at which the wobble direction changes. Smaller values ripple more finely.,设置抖动方向变化的间隔。数值越小波动越细。,設定抖動方向變化的間隔。數值越小波動越細。,흔들림의 방향이 바뀌는 간격입니다. 작게 하면 잘게 물결칩니다.,Define el espaciado con que cambia la dirección del temblor. Los valores pequeños ondulan más fino.,يضبط المسافة التي يتغير عندها اتجاه الاهتزاز. القيم الأصغر تموّج بدقة أكبر.,Mengatur jarak perubahan arah getaran. Nilai yang kecil menghasilkan riak lebih halus.
+HoldFrames,,コマ打ち,Hold Frames,定格帧数,定格影格數,유지 프레임,Fotogramas de retención,إطارات التثبيت,Frame Tahan
+HoldFramesDescription,,同じゆれを保つフレーム数です。2から3にすると手描きアニメらしくなります,Sets how many frames each wobble is held. Two or three frames give a hand-drawn look.,设置每次抖动保持的帧数。设为2到3帧会更像手绘动画。,設定每次抖動保持的影格數。設為2到3格會更像手繪動畫。,같은 흔들림을 유지하는 프레임 수입니다. 2에서 3으로 하면 손그림 애니메이션처럼 보입니다.,Define cuántos fotogramas se mantiene cada temblor. Dos o tres dan aspecto de dibujo a mano.,يضبط عدد الإطارات التي يُثبَّت فيها كل اهتزاز. إطاران أو ثلاثة يمنحان مظهر الرسم اليدوي.,Mengatur berapa frame setiap getaran ditahan. Dua atau tiga frame memberi kesan gambar tangan.
+FrameUnit,,フレーム,frames,帧,影格,프레임,fotogramas,إطارات,frame
+Seed,,シード,Seed,种子,種子,시드,Semilla,البذرة,Seed
+SeedDescription,,ゆれの並びを決定する固定値です,Sets the deterministic wobble pattern.,设置确定性的抖动图案。,設定確定性的抖動圖案。,흔들림 패턴을 정하는 고정값입니다.,Define el patrón determinista del temblor.,يضبط نمط الاهتزاز الحتمي.,Mengatur pola getaran yang deterministik.
+EdgeRadius,,輪郭の範囲,Contour Range,轮廓范围,輪廓範圍,윤곽 범위,Alcance del contorno,نطاق المحيط,Jangkauan Kontur
+EdgeRadiusDescription,,輪郭から内側と外側へ何ピクセルまで揺らすかです,Sets how far inside and outside the contour the wobble reaches.,设置从轮廓向内外抖动的像素范围。,設定從輪廓向內外抖動的像素範圍。,윤곽에서 안팎으로 몇 픽셀까지 흔들지 정합니다.,Define cuántos píxeles alcanza el temblor dentro y fuera del contorno.,يضبط مدى وصول الاهتزاز داخل المحيط وخارجه بالبكسل.,Mengatur seberapa jauh getaran menjangkau ke dalam dan ke luar kontur.
+EdgeFocus,,輪郭への集中,Contour Focus,轮廓集中度,輪廓集中度,윤곽 집중도,Enfoque en el contorno,التركيز على المحيط,Fokus Kontur
+EdgeFocusDescription,,0%で全体を一様に揺らし、100%で輪郭の近くだけを揺らします,At 0% the whole image wobbles evenly. At 100% only the area near contours wobbles.,0%时整体均匀抖动。100%时仅轮廓附近抖动。,0%時整體均勻抖動。100%時僅輪廓附近抖動。,0%는 전체를 고르게 흔들고 100%는 윤곽 부근만 흔듭니다.,Al 0% tiembla toda la imagen. Al 100% solo la zona cercana a los contornos.,عند 0% تهتز الصورة كاملة بالتساوي. وعند 100% تهتز المنطقة القريبة من المحيط فقط.,Pada 0% seluruh gambar bergetar merata. Pada 100% hanya area dekat kontur.
+TagHandDrawn,,手描き,hand drawn,手绘,手繪,손그림,dibujado a mano,مرسوم يدويا,gambar tangan
+TagWobble,,ゆれ,wobble,抖动,抖動,흔들림,temblor,اهتزاز,getar
+TagBoil,,コマ打ち,boil,定格,定格,컷 유지,boil,بويل,boil
+TagSketch,,ラフ,sketch,草图,草圖,러프,boceto,رسم تخطيطي,sketsa
