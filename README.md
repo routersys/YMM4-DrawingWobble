@@ -10,6 +10,8 @@ YukkuriMovieMaker4（YMM4）上で動作する、映像を手描きアニメの�
 映像の各画素を位置ごとに決めた向きと量だけずらし、同じゆれを数フレーム保ってから次のゆれへ切り替えます。
 色や不透明度が変わる輪郭の近くだけを揺らすこともできるため、静止画や図形や文字の輪郭を手描きの動画のように動かせます。
 
+![Image](https://github.com/routersys/YMM4-DrawingWobble/blob/main/docs/DrawingWobble.png)
+
 ---
 
 ## 目次
