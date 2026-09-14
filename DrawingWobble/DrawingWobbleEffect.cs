@@ -4,10 +4,12 @@ using YukkuriMovieMaker.Commons;
 using YukkuriMovieMaker.Controls;
 using YukkuriMovieMaker.Exo;
 using YukkuriMovieMaker.Player.Video;
+using YukkuriMovieMaker.Plugin;
 using YukkuriMovieMaker.Plugin.Effects;
 
 namespace DrawingWobble
 {
+    [PluginDetails(AuthorName = "routersys")]
     [VideoEffect(nameof(Texts.DrawingWobble), [VideoEffectCategories.Animation, VideoEffectCategories.Filtering], [nameof(Texts.TagHandDrawn), nameof(Texts.TagWobble), nameof(Texts.TagBoil), nameof(Texts.TagSketch)], IsAviUtlSupported = false, ResourceType = typeof(Texts))]
     public sealed class DrawingWobbleEffect : VideoEffectBase
     {
