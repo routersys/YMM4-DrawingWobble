@@ -87,7 +87,7 @@ namespace DrawingWobble
                 _cb.InputBounds = new Vector4(inputRect.Left, inputRect.Top, inputRect.Right, inputRect.Bottom);
                 UpdateConstants();
 
-                outputRect = Inflate(inputRect, OutputMargin());
+                outputRect = Margins.Inflate(inputRect, Margins.Output(_cb.Amplitude));
                 outputOpaqueSubRect = default;
             }
 
@@ -102,33 +102,35 @@ namespace DrawingWobble
                     return;
                 }
 
-                inputRects[0] = Inflate(outputRect, InputMargin());
+                inputRects[0] = Margins.Inflate(outputRect, Margins.Input(_cb.Amplitude, _cb.EdgeRadius, _cb.EdgeFocus));
             }
 
             public override RawRect MapInvalidRect(int inputIndex, RawRect invalidInputRect)
-                => Inflate(invalidInputRect, InputMargin());
+                => Margins.Inflate(invalidInputRect, Margins.Input(_cb.Amplitude, _cb.EdgeRadius, _cb.EdgeFocus));
 
-            private int OutputMargin() => Margin(_cb.Amplitude);
-
-            private int InputMargin() => Margin(SamplesRing() ? Math.Max(_cb.Amplitude, _cb.EdgeRadius) : _cb.Amplitude);
-
-            private bool SamplesRing() => _cb.Amplitude > 0f && _cb.EdgeFocus > 0f && _cb.EdgeRadius > 0f;
-
-            private static int Margin(float distance) => distance <= 0f ? 0 : (int)Math.Min(Math.Ceiling(distance) + 2.0, MaxInputPixel);
-
-            private static RawRect Inflate(RawRect rect, int margin)
+            internal static class Margins
             {
-                if (margin <= 0)
-                    return rect;
+                public static int Output(float amplitude) => Of(amplitude);
 
-                return new RawRect(
-                    Saturate((long)rect.Left - margin),
-                    Saturate((long)rect.Top - margin),
-                    Saturate((long)rect.Right + margin),
-                    Saturate((long)rect.Bottom + margin));
+                public static int Input(float amplitude, float edgeRadius, float edgeFocus)
+                    => Of(amplitude > 0f && edgeFocus > 0f && edgeRadius > 0f ? Math.Max(amplitude, edgeRadius) : amplitude);
+
+                public static RawRect Inflate(RawRect rect, int margin)
+                {
+                    if (margin <= 0)
+                        return rect;
+
+                    return new RawRect(
+                        Saturate((long)rect.Left - margin),
+                        Saturate((long)rect.Top - margin),
+                        Saturate((long)rect.Right + margin),
+                        Saturate((long)rect.Bottom + margin));
+                }
+
+                private static int Of(float distance) => distance <= 0f ? 0 : (int)Math.Min(Math.Ceiling(distance) + 2.0, MaxInputPixel);
+
+                private static int Saturate(long value) => (int)Math.Clamp(value, int.MinValue, int.MaxValue);
             }
-
-            private static int Saturate(long value) => (int)Math.Clamp(value, int.MinValue, int.MaxValue);
 
             [StructLayout(LayoutKind.Sequential)]
             private struct ConstantBuffer
