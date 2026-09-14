@@ -13,7 +13,7 @@ internal static class DrawingWobbleUpdateNotifier
 
     public static void EnsureCheckedOnce()
     {
-        if (Interlocked.Exchange(ref _started, 1) != 0)
+        if (Application.Current is null || Interlocked.Exchange(ref _started, 1) != 0)
             return;
         _ = RunAsync();
     }

@@ -16,20 +16,22 @@ internal static class DrawingWobbleTelemetry
 
     public static void EnsureStartedOnce()
     {
-        if (Interlocked.Exchange(ref _started, 1) != 0)
+        var application = Application.Current;
+        if (application is null || Interlocked.Exchange(ref _started, 1) != 0)
             return;
 
         AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
         TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
-
-        var application = Application.Current;
-        if (application is not null)
-            application.DispatcherUnhandledException += OnDispatcherUnhandledException;
+        application.DispatcherUnhandledException += OnDispatcherUnhandledException;
 
         TelemetryReporter.Start();
     }
 
-    public static void Report(Exception exception) => TelemetryReporter.Report(exception);
+    public static void Report(Exception exception)
+    {
+        if (Volatile.Read(ref _started) != 0)
+            TelemetryReporter.Report(exception);
+    }
 
     private static void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         => ReportOwn(e.ExceptionObject as Exception);
