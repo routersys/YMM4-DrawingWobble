@@ -9,7 +9,7 @@ namespace DrawingWobble
 {
     internal sealed class DrawingWobbleCustomEffect(IGraphicsDevicesAndContext devices) : D2D1CustomShaderEffectBase(Create<EffectImpl>(devices))
     {
-        private enum PropertyIndex
+        internal enum PropertyIndex
         {
             Amplitude = 0,
             Scale,
@@ -27,7 +27,7 @@ namespace DrawingWobble
         public int Seed { set => SetValue((int)PropertyIndex.Seed, value); }
 
         [CustomEffect(1)]
-        private sealed class EffectImpl : D2D1CustomShaderEffectImplBase<EffectImpl>
+        internal sealed class EffectImpl : D2D1CustomShaderEffectImplBase<EffectImpl>
         {
             private ConstantBuffer _cb;
 
