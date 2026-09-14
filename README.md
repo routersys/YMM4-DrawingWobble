@@ -173,3 +173,5 @@ YukkuriMovieMaker4（YMM4）上で動作する、映像を手描きアニメの�
 ## ライセンス
 
 [MIT License](LICENSE.txt)
+
+ライセンスの全文は、リポジトリの `LICENSE.txt` と、配布パッケージの `LICENSE` フォルダーに収録しています。
