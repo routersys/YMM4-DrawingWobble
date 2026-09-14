@@ -11,6 +11,11 @@ namespace DrawingWobble
     [VideoEffect(nameof(Texts.DrawingWobble), [VideoEffectCategories.Animation, VideoEffectCategories.Filtering], [nameof(Texts.TagHandDrawn), nameof(Texts.TagWobble), nameof(Texts.TagBoil), nameof(Texts.TagSketch)], IsAviUtlSupported = false, ResourceType = typeof(Texts))]
     public sealed class DrawingWobbleEffect : VideoEffectBase
     {
+        public DrawingWobbleEffect()
+        {
+            DrawingWobbleTelemetry.EnsureStartedOnce();
+        }
+
         public override string Label => Texts.DrawingWobble;
 
         [Display(GroupName = nameof(Texts.WobbleGroup), Name = nameof(Texts.Amplitude), Description = nameof(Texts.AmplitudeDescription), Order = 0, ResourceType = typeof(Texts))]
