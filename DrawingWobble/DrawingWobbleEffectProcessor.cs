@@ -17,6 +17,19 @@ namespace DrawingWobble
 
         public override DrawDescription Update(EffectDescription effectDescription)
         {
+            try
+            {
+                return UpdateCore(effectDescription);
+            }
+            catch (Exception exception)
+            {
+                DrawingWobbleTelemetry.Report(exception);
+                throw;
+            }
+        }
+
+        private DrawDescription UpdateCore(EffectDescription effectDescription)
+        {
             if (IsPassThroughEffect || _effect is null)
                 return effectDescription.DrawDescription;
 
@@ -74,6 +87,19 @@ namespace DrawingWobble
         }
 
         protected override void ClearEffectChain()
+        {
+            try
+            {
+                ClearEffectChainCore();
+            }
+            catch (Exception exception)
+            {
+                DrawingWobbleTelemetry.Report(exception);
+                throw;
+            }
+        }
+
+        private void ClearEffectChainCore()
         {
             _effect?.SetInput(0, null, true);
             _isFirst = true;

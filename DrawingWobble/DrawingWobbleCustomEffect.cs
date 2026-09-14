@@ -56,7 +56,18 @@ namespace DrawingWobble
 
             protected override void UpdateConstants()
             {
-                drawInformation?.SetPixelShaderConstantBuffer(_cb);
+                if (drawInformation is null)
+                    return;
+
+                try
+                {
+                    drawInformation.SetPixelShaderConstantBuffer(_cb);
+                }
+                catch (Exception exception)
+                {
+                    DrawingWobbleTelemetry.Report(exception);
+                    throw;
+                }
             }
 
             public override void MapInputRectsToOutputRect(

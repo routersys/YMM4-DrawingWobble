@@ -63,7 +63,17 @@ namespace DrawingWobble
             ExoOutputDescription exoOutputDescription) => [];
 
         public override IVideoEffectProcessor CreateVideoEffect(IGraphicsDevicesAndContext devices)
-            => new DrawingWobbleEffectProcessor(devices, this);
+        {
+            try
+            {
+                return new DrawingWobbleEffectProcessor(devices, this);
+            }
+            catch (Exception exception)
+            {
+                DrawingWobbleTelemetry.Report(exception);
+                throw;
+            }
+        }
 
         protected override IEnumerable<IAnimatable> GetAnimatables()
             => _animatables ??= [Amplitude, Scale, EdgeRadius, EdgeFocus];
