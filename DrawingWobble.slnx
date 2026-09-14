@@ -9,6 +9,7 @@
   <Project Path="DrawingWobble/DrawingWobble.csproj">
     <BuildDependency Project="DrawingWobble.Shader/DrawingWobble.Shader.vcxproj" />
   </Project>
+  <Project Path="DrawingWobble.Tests/DrawingWobble.Tests.csproj" />
   <Project Path="DrawingWobble.Shader/DrawingWobble.Shader.vcxproj">
     <BuildType Solution="*|*" Project="Release" />
     <Platform Solution="*|*" Project="Win32" />
