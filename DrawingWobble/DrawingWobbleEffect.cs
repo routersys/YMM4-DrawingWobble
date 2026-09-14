@@ -14,6 +14,7 @@ namespace DrawingWobble
         public DrawingWobbleEffect()
         {
             DrawingWobbleTelemetry.EnsureStartedOnce();
+            DrawingWobbleUpdateNotifier.EnsureCheckedOnce();
         }
 
         public override string Label => Texts.DrawingWobble;
