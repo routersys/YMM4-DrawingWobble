@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1f4a6af5-8a19-4c8a-a150-b43dda165914}</ProjectGuid>
+    <ProjectGuid>{C54330D1-C878-54F8-95B9-9FFE11887326}</ProjectGuid>
     <RootNamespace>DrawingWobbleShader</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
