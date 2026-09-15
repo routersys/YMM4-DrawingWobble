@@ -1,0 +1,110 @@
+{
+  "adapter": "Intel(R) Iris(R) Xe Graphics",
+  "driver": "32.0.101.7085",
+  "input": "synthetic 640x480 89838D8976198E40",
+  "canvas": "1280x720",
+  "cases": [
+    {
+      "name": "default",
+      "frames": [
+        0
+      ],
+      "hash": "B114CDA3AAA725A6BFD389A4B6E930A3CA814398A71355134E861E554A9104A3"
+    },
+    {
+      "name": "default-frame-4",
+      "frames": [
+        4
+      ],
+      "hash": "55BA14A2931CE4F3539A45687656DAACBFE2F475BC86ABE6FC30B718D47762E8"
+    },
+    {
+      "name": "default-frames-0-8",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "hash": "E130A44C982973ADCA3640F37659B26610AE85CBDFC8C9F344DDE80E99EFC8FB"
+    },
+    {
+      "name": "amplitude-0",
+      "frames": [
+        0
+      ],
+      "hash": "0A700F76CEDDBAD7C4B6A2C19D46939C1A93940E86C6EFEF1E5A53DB48D2A020"
+    },
+    {
+      "name": "amplitude-20",
+      "frames": [
+        0
+      ],
+      "hash": "7040B3DAEB12E4EEF1AB19A8936D6EB09CBD9A943B497D6A9440DE4E66782BE3"
+    },
+    {
+      "name": "scale-8",
+      "frames": [
+        0
+      ],
+      "hash": "BFC5FD0B99BE0E0BC56A846A866E462F90F34A0C05E81B8BD8BCEB304D9FA43E"
+    },
+    {
+      "name": "scale-400",
+      "frames": [
+        0
+      ],
+      "hash": "93C4A79D19DB49EF88626FC1110681636DDA3579920D0CA5345FD15B77862D7C"
+    },
+    {
+      "name": "hold-1-frame-2",
+      "frames": [
+        2
+      ],
+      "hash": "5E9375ADE4349AAE6AEE7DEEF71FBCD49DBBD923FE06EF0094D75F6E2DDD4086"
+    },
+    {
+      "name": "hold-1-frames-0-3",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "hash": "464A0C1FC4D9B902470B94CA94C008AF0F685D075A2B8FC3C4AA8A359282EBD8"
+    },
+    {
+      "name": "seed-42",
+      "frames": [
+        0
+      ],
+      "hash": "D8A147024D3769FF81029CDF05B8FF84D6360EA3C0B5056467DCC72A2F404ADD"
+    },
+    {
+      "name": "edge-radius-64",
+      "frames": [
+        0
+      ],
+      "hash": "FD2FB0945F0529DBC99092BFAF94385BCB289274525551B4653345AFF1A9C2DB"
+    },
+    {
+      "name": "edge-focus-0",
+      "frames": [
+        0
+      ],
+      "hash": "8A819BAD91F27CADE9CC50BD6C3255E14726FE2EACA0EE2C43715D676C901593"
+    },
+    {
+      "name": "edge-focus-50",
+      "frames": [
+        0
+      ],
+      "hash": "F4D065624C17E56CCD095D658912DFE3E52FE1324E58B3441F360D953DDE8686"
+    }
+  ]
+}
