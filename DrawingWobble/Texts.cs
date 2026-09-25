@@ -1,10 +1,8 @@
 using YukkuriMovieMaker.Generator;
 
-namespace DrawingWobble
-{
-    [AutoGenLocalizer]
-    partial class Texts
-    {
+namespace DrawingWobble;
 
-    }
+[AutoGenLocalizer]
+partial class Texts
+{
 }
